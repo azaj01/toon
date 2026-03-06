@@ -8,8 +8,11 @@ const config: FlatConfigComposer<TypedFlatConfigItem, ConfigNames> = antfu({
     'no-cond-assign': 'off',
   },
 }).append({
-  files: ['README.md', 'SPEC.md', '**/docs/**/*'],
+  files: ['**/README.md', 'SPEC.md', '**/benchmarks/**/*', '**/docs/**/*'],
   rules: {
+    'markdown/no-missing-link-fragments': 'off',
+    'markdown/fenced-code-language': 'off',
+    'markdown/heading-increment': 'off',
     'import/no-duplicates': 'off',
     'style/no-tabs': 'off',
     'yaml/quotes': 'off',
